@@ -1,0 +1,32 @@
+@use "../../styles/colors";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  nav {
+    flex-grow: 1;
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      gap: 60px;
+    }
+  }
+  .logo {
+    width: 210px;
+    pointer-events: none;
+  }
+  a,
+  a:visited {
+    color: colors.$primary;
+    text-decoration: none;
+    &.activeLink {
+      text-decoration: underline;
+    }
+  }
+}

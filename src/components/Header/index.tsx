@@ -1,21 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+import "./header.scss";
 import logo from "../../images/logo.svg";
 
 export const Header: React.FC = () => {
   return (
-    <header className="App-header">
-      <img alt="logo" className="App-logo" src={logo} />
+    <header className="header">
+      <img alt="logo" className="logo" src={logo} />
 
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "activeLink" : undefined
+              }
+              to="/"
+            >
+              Accueil
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "activeLink" : undefined
+              }
+              to="/about"
+            >
+              A Propos
+            </NavLink>
           </li>
         </ul>
       </nav>

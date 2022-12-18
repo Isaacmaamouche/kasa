@@ -1,27 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../images/logo.svg";
 
-import { Link } from "react-router-dom";
-
 export const Header: React.FC = () => {
   return (
-    <>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <header className="App-header">
+      <img alt="logo" className="App-logo" src={logo} />
 
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
 
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };

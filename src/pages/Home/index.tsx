@@ -1,6 +1,11 @@
-import React from 'react'
-export const Home:React.FC = () => {
+import React from "react";
 
-return (<>
-<div>Homepage</div>
-</>)}
+import { Carousel } from "../../components/Carousel";
+export const Home: React.FC = () => {
+  return (
+    <>
+      <div>Homepage</div>
+      <Carousel />
+    </>
+  );
+};

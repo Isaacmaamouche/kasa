@@ -4,17 +4,18 @@ import "./carousel.scss";
 //TODO carousel props
 //TODO responsive
 
-import { data } from "../../constants/data";
-const img = data[0].pictures;
-export const Carousel: React.FC = () => {
+type CarouselProps = {
+  images: string[];
+};
+export const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const [index, setIndex] = useState(0);
-  const enableControls = img.length > 1;
+  const enableControls = images.length > 1;
 
   const handleOnClick = (newIndex: number) => {
-    if (newIndex === img.length) {
+    if (newIndex === images.length) {
       setIndex(0);
     } else if (newIndex < 0) {
-      setIndex(img.length - 1);
+      setIndex(images.length - 1);
     } else {
       setIndex(newIndex);
     }
@@ -22,7 +23,7 @@ export const Carousel: React.FC = () => {
 
   return (
     <div className="carousel">
-      <img alt="" src={img[index]} />
+      <img alt="" src={images[index]} />
       {enableControls ? (
         <>
           <div
@@ -34,7 +35,7 @@ export const Carousel: React.FC = () => {
             onClick={() => handleOnClick(index + 1)}
           />
           <div className="index-info">
-            {index + 1}/{img.length}
+            {index + 1}/{images.length}
           </div>
         </>
       ) : null}

@@ -1,0 +1,19 @@
+@use "../../styles/variables";
+
+.rating__container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+
+  .rating__star {
+    mask-image: url("../../images/star.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-color: variables.$secondary;
+    &.rating__star--filled {
+      background-color: variables.$primary;
+    }
+  }
+}

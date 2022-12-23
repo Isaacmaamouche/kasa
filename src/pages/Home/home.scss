@@ -1,0 +1,13 @@
+@use "../../styles/variables";
+
+.card__container {
+  display: flex;
+  gap: 60px;
+  padding-block: 60px;
+  background-color: variables.$secondary;
+  border-radius: 25px;
+  margin-block: 43px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

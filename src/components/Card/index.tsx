@@ -8,11 +8,9 @@ type CardProps = {
 };
 export const Card: React.FC<CardProps> = ({ title, image, link }) => {
   return (
-    <div className="card">
-      <a href={link} title={title}>
-        <div className="card__title">{title}</div>
-        {image && <img src={image} alt={title} />}
-      </a>
-    </div>
+    <a className="card" href={link} title={title}>
+      <span className="card__title">{title}</span>
+      {image && <img src={image} alt={title} />}
+    </a>
   );
 };

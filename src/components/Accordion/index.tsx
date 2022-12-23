@@ -15,7 +15,7 @@ export const Accordion: React.FC<AccordionProps> = ({ children, heading }) => {
       <div className={`accordion ${isOpen && "isOpen"}`}>
         <div className="accordion__heading" onClick={() => setIsOpen(!isOpen)}>
           {headingIsNode && <div>{heading}</div>}
-          {!headingIsNode && <p>{heading}</p>}
+          {!headingIsNode && <span>{heading}</span>}
         </div>
         {isOpen && <div className="accordion__content">{children}</div>}
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./home.scss";
+
 import hero_home from "../../images/hero_home.jpeg";
 import { Carousel } from "../../components/Carousel";
 import { HeroBanner } from "../../components/HeroBanner";
@@ -14,6 +16,18 @@ export const Home: React.FC = () => {
   return (
     <>
       <HeroBanner image={hero_home} text="Chez vous, partout et ailleurs" />
+
+      <div className="card__container">
+        {data.map((flat) => (
+          <Card
+            key={flat.id}
+            title={flat.title}
+            link={`/${flat.id}`}
+            image={flat.cover}
+          />
+        ))}
+      </div>
+
       <Host name={data[0].host.name} avatar={data[0].host.picture} />
       <Rating rating={"4"} />
       <Tag content="tag" />

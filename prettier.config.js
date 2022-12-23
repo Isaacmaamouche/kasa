@@ -2,7 +2,7 @@ module.Exports = {
   printWidth: 100,
   useTabs: false,
   semi: false,
-  singleQuote: true,
+  singleQuote: false,
   trailingComma: "es5",
   bracketSpacing: true,
   arrowParens: "avoid",

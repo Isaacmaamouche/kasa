@@ -19,7 +19,6 @@ module.exports = {
   root: true,
   rules: {
     // Errors
-    "prettier/prettier": "error",
     "no-unused-vars": ["error", { ignoreRestSiblings: true }],
     "react/prop-types": ["error", { ignore: ["dataTestId"] }],
     quotes: [2, "double", { avoidEscape: true }],
@@ -32,6 +31,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "error",
     // Warnings
+    "prettier/prettier": "warning",
     "no-console": "warn",
     "import/order": ["warn", { "newlines-between": "always" }],
     "sort-imports": [

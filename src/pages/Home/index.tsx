@@ -6,10 +6,13 @@ import { HeroBanner } from "../../components/HeroBanner";
 import { data } from "../../constants/data";
 import { Accordion } from "../../components/Accordion";
 import { Card } from "../../components/Card";
+import { Tag } from "../../components/Tag";
+
 export const Home: React.FC = () => {
   return (
     <>
       <HeroBanner image={hero_home} text="Chez vous, partout et ailleurs" />
+      <Tag content="tag" />
       <Card title="title" image={data[0].pictures[0]} link={"/#"} />
       <Accordion heading="heading">
         <p>content</p>

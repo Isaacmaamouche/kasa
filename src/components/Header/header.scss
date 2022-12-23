@@ -1,4 +1,4 @@
-@use "../../styles/colors";
+@use "../../styles/variables";
 
 .header {
   display: flex;
@@ -23,7 +23,7 @@
   }
   a,
   a:visited {
-    color: colors.$primary;
+    color: variables.$primary;
     text-decoration: none;
     &.activeLink {
       text-decoration: underline;

@@ -12,7 +12,6 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:react/all",
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "import", "sort-destructure-keys"],
@@ -31,7 +30,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": "error",
     // Warnings
-    "prettier/prettier": "warning",
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
     "no-console": "warn",
     "import/order": ["warn", { "newlines-between": "always" }],
     "sort-imports": [

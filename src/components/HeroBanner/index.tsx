@@ -4,13 +4,13 @@ import "./hero-banner.scss";
 
 type HeroBannerProps = {
   text?: string;
-  image?: string;
+  image: string;
 };
 export const HeroBanner: React.FC<HeroBannerProps> = ({ image, text }) => {
   return (
     <div className="hero__banner">
-      {image ? <img alt="" className="hero__image" src={image} /> : null}
-      {text ? <h1 className="hero__title"> {text} </h1> : null}
+      <img alt={`image ${text}`} className="hero__image" src={image} />
+      {text && <h1 className="hero__title"> {text} </h1>}
     </div>
   );
 };

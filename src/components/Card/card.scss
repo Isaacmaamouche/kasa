@@ -1,9 +1,7 @@
-@use "../../styles/variables";
-
 .card {
   position: relative;
-  border-radius: variables.$border-radius;
-  background-color: variables.$primary;
+  border-radius: var(--border-radius);
+  background-color: var(--primary);
   width: 340px;
   height: 340px;
   overflow: hidden;

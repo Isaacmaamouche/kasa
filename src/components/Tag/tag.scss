@@ -1,10 +1,8 @@
-@use "../../styles/variables";
-
 .tag {
   display: inline-block;
   padding: 2px 22px;
-  border-radius: variables.$border-radius;
-  background-color: variables.$primary;
+  border-radius: var(--border-radius);
+  background-color: var(--primary);
   color: white;
   font-size: 14px;
 }

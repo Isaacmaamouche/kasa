@@ -10,9 +10,10 @@ export const Accordion: React.FC<AccordionProps> = ({ children, heading }) => {
   const [isOpen, setIsOpen] = useState(false);
   const headingIsNode =
     typeof heading !== "string" && typeof heading !== "number";
+  const accordionClass = `accordion ${isOpen ? "isOpen" : ""}`;
   return (
     <>
-      <div className={`accordion ${isOpen && "isOpen"}`}>
+      <div className={accordionClass}>
         <div className="accordion__heading" onClick={() => setIsOpen(!isOpen)}>
           {headingIsNode && <div>{heading}</div>}
           {!headingIsNode && <span>{heading}</span>}

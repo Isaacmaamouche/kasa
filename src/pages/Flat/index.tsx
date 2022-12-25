@@ -10,14 +10,20 @@ import { Error } from "../../components/Error";
 import "./flat.scss";
 import { useViewportSize } from "../../utils/useViewportSize";
 
+//TODO Figure the navigate thing out
+
 export const Flat: React.FC = () => {
   const { flatId } = useParams();
+  // const navigate = useNavigate();
+
   const { innerWidth } = useViewportSize();
   const mobileViewport = innerWidth < 425;
 
-  console.debug(innerWidth, mobileViewport);
-
   const flatData = data?.find((flat) => flat.id === flatId);
+
+  // useEffect(() => {
+  //   if (!flatData) navigate("/about");
+  // });
 
   if (!flatData) return <Error />;
   return (

@@ -4,10 +4,15 @@ import "./accordion.scss";
 type AccordionProps = {
   children: ReactNode;
   heading: ReactNode;
+  expanded?: boolean;
 };
 
-export const Accordion: React.FC<AccordionProps> = ({ children, heading }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const Accordion: React.FC<AccordionProps> = ({
+  children,
+  heading,
+  expanded = false,
+}) => {
+  const [isOpen, setIsOpen] = useState(expanded);
   const headingIsNode =
     typeof heading !== "string" && typeof heading !== "number";
   const accordionClass = `accordion ${isOpen ? "isOpen" : ""}`;

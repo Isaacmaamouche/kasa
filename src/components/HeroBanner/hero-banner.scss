@@ -36,3 +36,14 @@
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .hero__banner {
+    height: 111px;
+    margin-block: 20px;
+
+    .hero__title {
+      font-size: 24px;
+    }
+  }
+}

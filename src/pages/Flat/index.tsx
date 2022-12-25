@@ -8,9 +8,14 @@ import { Tag } from "../../components/Tag";
 import { data } from "../../constants/data";
 import { Error } from "../../components/Error";
 import "./flat.scss";
+import { useViewportSize } from "../../utils/useViewportSize";
 
 export const Flat: React.FC = () => {
   const { flatId } = useParams();
+  const { innerWidth } = useViewportSize();
+  const mobileViewport = innerWidth < 425;
+
+  console.debug(innerWidth, mobileViewport);
 
   const flatData = data?.find((flat) => flat.id === flatId);
 
@@ -25,8 +30,8 @@ export const Flat: React.FC = () => {
             <p className="flat__location">{flatData.location}</p>
           </div>
           <div className="flat__tags">
-            {flatData.tags.map((tag) => (
-              <Tag content={tag} />
+            {flatData.tags.map((tag, idx) => (
+              <Tag key={idx} content={tag} />
             ))}
           </div>
         </div>
@@ -38,11 +43,13 @@ export const Flat: React.FC = () => {
       </div>
 
       <div className="flat__details">
-        <Accordion heading="Description">{flatData.description}</Accordion>
-        <Accordion heading="Equipements">
+        <Accordion heading="Description" expanded={!mobileViewport}>
+          {flatData.description}
+        </Accordion>
+        <Accordion heading="Equipements" expanded={!mobileViewport}>
           <ul>
-            {flatData.equipments.map((equipment) => (
-              <li>{equipment}</li>
+            {flatData.equipments.map((equipment, idx) => (
+              <li key={idx}>{equipment}</li>
             ))}
           </ul>
         </Accordion>

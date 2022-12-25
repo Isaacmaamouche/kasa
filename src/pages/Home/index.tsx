@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
           <Card
             key={flat.id}
             title={flat.title}
-            link={`/${flat.id}`}
+            link={`flat/${flat.id}`}
             image={flat.cover}
           />
         ))}

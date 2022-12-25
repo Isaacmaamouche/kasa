@@ -6,18 +6,15 @@ import { Host } from "../../components/Host";
 import { Rating } from "../../components/Rating";
 import { Tag } from "../../components/Tag";
 import { data } from "../../constants/data";
+import { Error } from "../../components/Error";
 import "./flat.scss";
-
-//TODO Responsiveness
-//TODO Data layout
 
 export const Flat: React.FC = () => {
   const { flatId } = useParams();
 
-  const flatData = data.find((flat) => flat.id === flatId);
+  const flatData = data?.find((flat) => flat.id === flatId);
 
-  if (!flatData) return null;
-
+  if (!flatData) return <Error />;
   return (
     <>
       <Carousel images={flatData.pictures} />

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import { Error } from "./pages/Error";
+import { Error } from "./components/Error";
 import { Layout } from "./Layout";
 import { Flat } from "./pages/Flat";
 
@@ -14,7 +14,7 @@ export const App: React.FC = () => {
         <Route element={<Layout />} path="/">
           <Route element={<Home />} index />
           <Route element={<About />} path="about" />
-          <Route element={<Flat />} path=":flatId" />
+          <Route element={<Flat />} path="flat/:flatId" />
           <Route element={<Error />} path="*" />
         </Route>
       </Routes>

@@ -15,3 +15,14 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .rating__container {
+    gap: 5px;
+
+    .rating__star {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

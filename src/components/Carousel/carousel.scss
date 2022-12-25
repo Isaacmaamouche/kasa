@@ -34,3 +34,15 @@
     bottom: 25px;
   }
 }
+
+@media (max-width: 425px) {
+  .carousel {
+    .control {
+      height: 20px;
+      width: 12px;
+    }
+    .index-info {
+      display: none;
+    }
+  }
+}

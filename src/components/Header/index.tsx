@@ -7,7 +7,9 @@ import logo from "../../images/logo.svg";
 export const Header: React.FC = () => {
   return (
     <header className="header">
-      <img alt="logo" className="logo" src={logo} />
+      <NavLink to="/">
+        <img alt="logo" className="logo" src={logo} />
+      </NavLink>
 
       <nav>
         <ul>

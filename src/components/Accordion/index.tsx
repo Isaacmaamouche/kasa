@@ -9,8 +9,8 @@ type AccordionProps = {
 
 export const Accordion: React.FC<AccordionProps> = ({
   children,
-  heading,
   expanded = false,
+  heading,
 }) => {
   const [isOpen, setIsOpen] = useState(expanded);
   const headingIsNode =

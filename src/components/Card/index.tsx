@@ -7,7 +7,7 @@ type CardProps = {
   image?: string;
   link: string;
 };
-export const Card: React.FC<CardProps> = ({ title, image, link }) => {
+export const Card: React.FC<CardProps> = ({ image, link, title }) => {
   return (
     <Link className="card" to={link} title={title}>
       <span className="card__title">{title}</span>

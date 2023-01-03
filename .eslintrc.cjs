@@ -14,7 +14,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "import", "sort-destructure-keys"],
+  plugins: ["react", "@typescript-eslint", "import", "sort-destructure-keys"],
   root: true,
   rules: {
     // Errors

@@ -1,5 +1,6 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+
 import { Accordion } from "../../components/Accordion";
 import { Carousel } from "../../components/Carousel";
 import { Host } from "../../components/Host";
@@ -14,13 +15,14 @@ import { useViewportSize } from "../../utils/useViewportSize";
 
 export const Flat: React.FC = () => {
   const { flatId } = useParams();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { innerWidth } = useViewportSize();
   const mobileViewport = innerWidth < 425;
 
   const flatData = data?.find((flat) => flat.id === flatId);
 
+  navigate("/about");
   // useEffect(() => {
   //   if (!flatData) navigate("/about");
   // });

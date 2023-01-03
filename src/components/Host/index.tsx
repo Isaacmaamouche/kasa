@@ -6,7 +6,7 @@ type HostProps = {
   name: string;
   avatar: string;
 };
-export const Host: React.FC<HostProps> = ({ name, avatar }) => {
+export const Host: React.FC<HostProps> = ({ avatar, name }) => {
   const slicedName = [name.split(" ")[0], name.split(" ").slice(1)].map(
     (part, idx) => <span key={idx}>{part}</span>
   );

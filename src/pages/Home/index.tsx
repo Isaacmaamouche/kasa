@@ -10,7 +10,15 @@ import { Card } from "../../components/Card";
 export const Home: React.FC = () => {
   return (
     <>
-      <HeroBanner image={hero_home} text="Chez vous, partout et ailleurs" />
+      <HeroBanner
+        image={hero_home}
+        text={
+          <h1 className="hero__title">
+            Chez vous, <br />
+            partout et ailleurs{" "}
+          </h1>
+        }
+      />
 
       <div className="card__container">
         {data.map((flat) => (

@@ -2,8 +2,8 @@
   position: relative;
   border-radius: var(--border-radius);
   background-color: var(--primary);
-  width: 340px;
-  height: 340px;
+  min-width: min(340px, 100%);
+  min-height: min(340px, 100%);
   overflow: hidden;
   text-decoration: none;
   color: white;

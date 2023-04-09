@@ -1,13 +1,11 @@
 .card__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: 60px;
   padding: 50px;
   background-color: var(--secondary);
   border-radius: 25px;
   margin-block: 43px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 @media (max-width: 768px) {

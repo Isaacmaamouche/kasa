@@ -21,12 +21,12 @@
     translate: 0 -50%;
     background-image: url("../../images/carousel-arrow.svg");
     background-size: contain;
-    &.control-left {
+    &.control__left {
       scale: -1 1;
       left: 24px;
     }
   }
-  .index-info {
+  .index__info {
     color: white;
     position: absolute;
     left: 50%;
@@ -41,7 +41,7 @@
       height: 20px;
       width: 12px;
     }
-    .index-info {
+    .index__info {
       display: none;
     }
   }

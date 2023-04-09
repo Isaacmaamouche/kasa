@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Accordion } from "../../components/Accordion";
 import { Carousel } from "../../components/Carousel";
@@ -9,23 +9,10 @@ import { Tag } from "../../components/Tag";
 import { data } from "../../constants/data";
 import { Error } from "../../components/Error";
 import "./flat.scss";
-import { useViewportSize } from "../../utils/useViewportSize";
-
-//TODO Figure the navigate thing out
 
 export const Flat: React.FC = () => {
   const { flatId } = useParams();
-  const navigate = useNavigate();
-
-  const { innerWidth } = useViewportSize();
-  const mobileViewport = innerWidth < 425;
-
   const flatData = data?.find((flat) => flat.id === flatId);
-
-  navigate("/about");
-  // useEffect(() => {
-  //   if (!flatData) navigate("/about");
-  // });
 
   if (!flatData) return <Error />;
   return (
@@ -51,10 +38,8 @@ export const Flat: React.FC = () => {
       </div>
 
       <div className="flat__details">
-        <Accordion heading="Description" expanded={!mobileViewport}>
-          {flatData.description}
-        </Accordion>
-        <Accordion heading="Equipements" expanded={!mobileViewport}>
+        <Accordion heading="Description">{flatData.description}</Accordion>
+        <Accordion heading="Equipements">
           <ul>
             {flatData.equipments.map((equipment, idx) => (
               <li key={idx}>{equipment}</li>

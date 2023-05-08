@@ -12,11 +12,11 @@ export const Home: React.FC = () => {
     <>
       <HeroBanner
         image={hero_home}
-        text={
-          <h1 className="hero__title">
+        title={
+          <span>
             Chez vous, <br />
-            partout et ailleurs{" "}
-          </h1>
+            partout et ailleurs
+          </span>
         }
       />
 

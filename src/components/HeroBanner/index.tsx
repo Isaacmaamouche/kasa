@@ -3,25 +3,14 @@ import React, { ReactNode } from "react";
 import "./hero-banner.scss";
 
 type HeroBannerProps = {
-  text?: ReactNode;
+  title?: ReactNode;
   image: string;
 };
-export const HeroBanner: React.FC<HeroBannerProps> = ({ image, text }) => {
-  const textIsNode = Boolean(text instanceof Element);
-  const imgAlt = textIsNode ? "" : text;
+export const HeroBanner: React.FC<HeroBannerProps> = ({ image, title }) => {
   return (
     <div className="hero__banner">
-      <img
-        alt={`image d'illustration ${imgAlt}`}
-        className="hero__image"
-        src={image}
-      />
-      {text && (
-        <>
-          {textIsNode && { text }}
-          {!textIsNode && <h1 className="hero__title"> {text} </h1>}
-        </>
-      )}
+      <img alt="image d'illustration" className="hero__image" src={image} />
+      {title && <h1 className="hero__title">{title}</h1>}
     </div>
   );
 };
